@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps - BookGO</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Bookshelf Apps</h2>
+    </header>
+    <main>
+      <section class="container">
+        <!-- Left Container in Large Screen -->
+        <div class="form-content">
+          <form id="form" action="">
+            <input type="hidden" name="id" id="id" value="0" />
+            <div class="form_group group-for-title">
+              <label for="title">Judul</label>
+              <input type="text" name="title" id="title" required />
+            </div>
+            <div class="form_group group-for-author">
+              <label for="author">Penulis</label>
+              <input type="text" name="author" id="author" required />
+            </div>
+            <div class="form_group group-for-year">
+              <label for="year">Tahun</label>
+              <input type="number" name="year" id="year" required />
+            </div>
+            <div class="form_group group-for-isComplete">
+              <input type="checkbox" name="isComplete" id="isComplete" />
+              <label for="isComplete">Selesai Dibaca</label>
+            </div>
+            <div class="form-buttons">
+              <button type="button" id="reset-button">Batal</button>
+              <button type="submit" id="submit-button">Simpan</button>
+            </div>
+          </form>
+        </div>
+        <!-- Right Container in Large Screen -->
+        <div class="books-table-content">
+          <!-- Searchbar Elements -->
+          <form class="searchbar-elements">
+            <input
+              type="text"
+              name="searchbar"
+              id="searchbar"
+              placeholder="Cari Buku"
+            />
+            <button class="searchbar-button">Cari</button>
+          </form>
+          <!-- Book Storage (Completed & Not Completed) -->
+          <!-- is Not Complete -->
+          <div>
+            <div class="is-completed-to-reading-content">
+              <h3 class="title-not-complete">Belum Selesai Dibaca</h3>
+              <span class="hr-custom"></span>
+            </div>
+            <div class="card-wrapper-not-completed"></div>
+          </div>
+          <!-- is Complete -->
+          <div>
+            <div class="is-completed-to-reading-content">
+              <h3 class="title-complete">Selesai Dibaca</h3>
+              <span class="hr-custom"></span>
+            </div>
+            <div class="card-wrapper-completed"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
