@@ -247,10 +247,7 @@ const searchBooks = (title) => {
 // Search Feature
 const searchBarInput = document.getElementById("searchbar");
 
-searchBarInput.addEventListener("change", (e) => {
-  searchBooks(e.target.value);
-});
-document.querySelector(".searchbar-button").addEventListener("click", () => {
+document.querySelector(".searchbar-button").addEventListener("click", (e) => {
   searchBooks(searchBarInput.value);
 });
 document
